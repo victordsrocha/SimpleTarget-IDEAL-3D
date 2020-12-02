@@ -3143,7 +3143,7 @@ PrefabInstance:
     - target: {fileID: 9103583222340391701, guid: ca685bf5cba1e384ebc61d95e67196ad,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.340848
+      value: -11.4
       objectReference: {fileID: 0}
     - target: {fileID: 9103583222340391701, guid: ca685bf5cba1e384ebc61d95e67196ad,
         type: 3}
@@ -3263,7 +3263,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fc4afe0f20d07414d97777b1b7daaa7e, type: 2}
+      objectReference: {fileID: 2100000, guid: 509f9d599da8b97419fdc02aca60c9af, type: 2}
     - target: {fileID: 773828191957059900, guid: 70a0ec43c332fcc4b953231e669de39f,
         type: 3}
       propertyPath: m_Name
@@ -3272,7 +3272,7 @@ PrefabInstance:
     - target: {fileID: 773828191957059900, guid: 70a0ec43c332fcc4b953231e669de39f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70a0ec43c332fcc4b953231e669de39f, type: 3}
@@ -3306,6 +3306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 527200d2b2a36cb498df7492ae0da967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  getObservation: 0
 --- !u!114 &919132148882526024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3392,7 +3393,7 @@ PrefabInstance:
     - target: {fileID: 6046627180751488421, guid: 67403da96fc763b4cb9bef6cd16d4e87,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.44
+      value: -3.99
       objectReference: {fileID: 0}
     - target: {fileID: 6046627180751488421, guid: 67403da96fc763b4cb9bef6cd16d4e87,
         type: 3}

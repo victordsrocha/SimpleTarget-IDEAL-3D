@@ -8,19 +8,30 @@ public class TargetGenerator : MonoBehaviour
 {
     public LayerMask obstacleMask;
     public Target targetPrefab;
-    private Target target;
+    
+    // A lógica para destruir o alvo após timeToCatch segundos não funciona quando Time.captureFramerate é alterado
+    // public float timeToCatch = 60f;
+    private Target _target;
 
     private void Start()
     {
-        target = FindObjectOfType<Target>();
+        _target = FindObjectOfType<Target>();
     }
 
     private void LateUpdate()
     {
-        if (target == null)
+        if (_target == null)
         {
-            target = InstantiateNewTarget();
+            _target = InstantiateNewTarget();
         }
+
+        /*
+        if (Time.time - _target.birthTime > timeToCatch)
+        {
+            _target.DestroyTarget();
+        }
+        */
+
     }
 
     private Target InstantiateNewTarget()
@@ -35,6 +46,7 @@ public class TargetGenerator : MonoBehaviour
         if (overlapSphere.Length == 0)
         {
             newTarget = Instantiate(targetPrefab, birthSpot, Quaternion.identity);
+            newTarget.birthTime = Time.time;
         }
 
         return newTarget;

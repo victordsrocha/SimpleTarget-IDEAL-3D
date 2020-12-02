@@ -10,8 +10,8 @@ public class Player : MonoBehaviour
     public bool humanInput;
     public GameObject plane;
 
-    private Rigidbody playerRigidbody;
-    private Observation playerObservation;
+    private Rigidbody _playerRigidbody;
+    private Observation _playerObservation;
     public bool collision;
     [SerializeField] private float force;
     [SerializeField] private float timeBetweenActions;
@@ -20,11 +20,14 @@ public class Player : MonoBehaviour
     private float time;
     public bool isFoodReached;
 
+    private EnvInterface _envInterface;
+
     // Start is called before the first frame update
     void Start()
     {
-        playerRigidbody = GetComponent<Rigidbody>();
-        playerObservation = GetComponent<Observation>();
+        _playerRigidbody = GetComponent<Rigidbody>();
+        _playerObservation = GetComponent<Observation>();
+        _envInterface = GetComponent<EnvInterface>();
         time = Time.time;
         collision = false;
     }
@@ -83,8 +86,8 @@ public class Player : MonoBehaviour
         transform.DORotate(new Vector3(0.0f, rotationVector + rotationDirection * rotationSpeed, 0.0f),
             timeBetweenActions);
         yield return new WaitForSeconds(timeBetweenActions);
-        playerObservation.UpdateObservation();
-        EnvInterface.getObservation = true;
+        _playerObservation.UpdateObservation();
+        _envInterface.getObservation = true;
     }
 
     public void MoveForward()
@@ -94,12 +97,12 @@ public class Player : MonoBehaviour
 
     private IEnumerator MoveForwardCoroutine()
     {
-        playerRigidbody.velocity = transform.forward * force;
+        _playerRigidbody.velocity = transform.forward * force;
         yield return new WaitForSeconds(timeBetweenActions);
         // ReSharper disable once Unity.InefficientPropertyAccess
-        playerRigidbody.velocity = Vector3.zero;
-        playerObservation.UpdateObservation(true);
-        EnvInterface.getObservation = true;
+        _playerRigidbody.velocity = Vector3.zero;
+        _playerObservation.UpdateObservation(true);
+        _envInterface.getObservation = true;
     }
 
     private void OnCollisionEnter(Collision other)

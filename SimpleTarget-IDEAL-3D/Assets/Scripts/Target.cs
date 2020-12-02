@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
+    public float birthTime;
     public void DestroyTarget()
     {
         Destroy(gameObject);

@@ -54,7 +54,7 @@ public class Observation : MonoBehaviour
     private void FoodReached(Eye left, Eye right)
     {
         player.isFoodReached = false;
-        
+
         left.lastVisionState = VisionState.Reached;
         right.lastVisionState = VisionState.Reached;
 
@@ -75,7 +75,7 @@ public class Observation : MonoBehaviour
             {
                 if (move)
                 {
-                    if (Distance(foodTransform) < eye.lastDistance)
+                    if (Distance(foodTransform) < eye.lastDistance && eye.lastDistance - Distance(foodTransform) > 0.1f )
                     {
                         eye.lastVisionState = VisionState.Closer;
                         eye.lastDistance = Distance(foodTransform);
@@ -140,11 +140,11 @@ public class Observation : MonoBehaviour
         return dstToTarget;
     }
 
-    public string Result()
+    public string Result(char act)
     {
         string result = "";
 
-        if (player.collision)
+        if (player.collision && act == '→')
         {
             result += "b";
         }

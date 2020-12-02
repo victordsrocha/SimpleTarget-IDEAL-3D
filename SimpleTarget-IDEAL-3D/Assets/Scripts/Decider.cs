@@ -160,6 +160,13 @@ public class Decider : MonoBehaviour
         return other;
     }
 
+    private Experiment GetOtherExperimentPrimitive()
+    {
+        var primitiveAnticipations = GetDefaultAnticipations();
+        var randomPos = Random.Range(0, primitiveAnticipations.Count);
+        return primitiveAnticipations[randomPos].Experiment;
+    }
+
     public Experiment SelectExperiment(List<Anticipation> anticipations)
     {
         /*
@@ -203,13 +210,23 @@ public class Decider : MonoBehaviour
             }
             else
             {
-                selectedExperiment = GetOtherExperiment(selectedAnticipation.Experiment);
+                // selectedExperiment = GetOtherExperiment(selectedAnticipation.Experiment);
                 //selectedExperiment = selectedAnticipation.experiment;
+
+                // não estou gostando de escolher aleatoriamente qualquer propose, mesmo que a proclivity seja muito
+                // negativa
+
+                // vou usar uma escolha aleatoria somente entre exp primitivos e depois pesquiso esse
+                // problema
+
+                // TODO
+
+                selectedExperiment = GetOtherExperimentPrimitive();
             }
         }
         else
         {
-            selectedExperiment = GetOtherExperiment(null);
+            selectedExperiment = GetOtherExperimentPrimitive();
         }
 
         return selectedExperiment;
