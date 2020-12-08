@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float force = 1f;
     [SerializeField] private float timeBetweenActions;
     [SerializeField] private float rotationSpeed;
+    [SerializeField] private List<char> spatialSense;
+    [SerializeField] private int spatialSensePositions;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,6 @@ public class PlayerController : MonoBehaviour
         MoveForwardChange();
     }
 
-    
 
     private void RotationChange()
     {
@@ -50,7 +51,7 @@ public class PlayerController : MonoBehaviour
             other.GetComponent<Target>().DestroyTarget();
         }
     }
-    
+
     private void MoveForwardChange()
     {
         if (Input.GetKey("w"))
@@ -58,7 +59,7 @@ public class PlayerController : MonoBehaviour
             MoveForward();
         }
     }
-    
+
     public void MoveForward()
     {
         StartCoroutine(MoveForwardCoroutine());

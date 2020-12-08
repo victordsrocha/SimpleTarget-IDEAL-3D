@@ -204,7 +204,7 @@ public class Decider : MonoBehaviour
 
 
             var selectedAnticipation = anticipations[0];
-            if (selectedAnticipation.Proclivity > 0)
+            if (selectedAnticipation.Proclivity > 0f)
             {
                 selectedExperiment = selectedAnticipation.Experiment;
             }
@@ -259,5 +259,9 @@ public class Decider : MonoBehaviour
         }
 
         this.superInteraction = lastSuperInteraction;
+
+        // When a schema reaches a weight of 0 it is deleted from memory
+        memory.DecrementAndForgetSchemas(new List<Interaction>()
+            {previousInteraction, lastInteraction, previousSuperInteraction, lastSuperInteraction});
     }
 }

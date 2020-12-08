@@ -5,15 +5,15 @@ using UnityEngine;
 public class Anticipation
 {
     public Experiment Experiment;
-    public int Proclivity;
+    public float Proclivity;
 
-    public Anticipation(Experiment experiment, int proclivity)
+    public Anticipation(Experiment experiment, float proclivity)
     {
         this.Experiment = experiment;
         this.Proclivity = proclivity;
     }
 
-    public void AddProclivity(int incProclivity)
+    public void AddProclivity(float incProclivity)
     {
         this.Proclivity += incProclivity;
     }

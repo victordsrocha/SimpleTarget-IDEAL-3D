@@ -113,7 +113,7 @@ public class AgentAI : MonoBehaviour
 
             StartCoroutine(TryEnactAndLearnCoroutine(intendedInteraction));
 
-
+            
             yield return new WaitUntil(() => nextStep);
         }
     }

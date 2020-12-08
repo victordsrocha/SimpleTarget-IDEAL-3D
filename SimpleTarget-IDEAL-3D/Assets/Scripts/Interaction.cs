@@ -9,7 +9,7 @@ public class Interaction
     public int valence { get; set; }
     public Interaction PreInteraction { get; set; }
     public Interaction PostInteraction { get; set; }
-    public int Weight { get; set; }
+    public float Weight { get; set; }
 
     public Interaction(string label)
     {

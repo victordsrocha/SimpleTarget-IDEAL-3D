@@ -10,6 +10,7 @@ public class Memory : MonoBehaviour
     public Dictionary<string, Interaction> KnownInteractions;
     public Dictionary<string, Experiment> KnownExperiments;
     private int interactionLabelSize;
+    [SerializeField] private float forgettingRate = 0.2f;
 
     private void Start()
     {
@@ -42,7 +43,7 @@ public class Memory : MonoBehaviour
     public Interaction AddOrGetAndReinforceCompositeInteraction(Interaction preInteraction, Interaction postInteraction)
     {
         var compositeInteraction = AddOrGetCompositeInteraction(preInteraction, postInteraction);
-        compositeInteraction.Weight++;
+        compositeInteraction.Weight += 1f;
 
         /*
         if (compositeInteraction.Weight == 1)
@@ -57,6 +58,40 @@ public class Memory : MonoBehaviour
 
 
         return compositeInteraction;
+    }
+
+    public void DecrementAndForgetSchemas(List<Interaction> enactedInteractions)
+    {
+        foreach (var enactedInteraction in enactedInteractions)
+        {
+            if (enactedInteraction != null && !enactedInteraction.is_primitive())
+            {
+                enactedInteraction.Weight += forgettingRate;
+            }
+        }
+
+        foreach (var knownInteraction in KnownInteractions.Values)
+        {
+            if (!knownInteraction.is_primitive())
+            {
+                if (!enactedInteractions.Contains(knownInteraction))
+                {
+                    // estou dividindo pela valencia como uma forma provisoria de garantir que 
+                    // memorias muito boas ou muito ruins sejam mais dificilemtne esquecidas
+                    knownInteraction.Weight -= forgettingRate / Mathf.Abs(knownInteraction.valence);
+                }
+
+
+                // When a schema reaches a weight of 0 it is deleted from memory
+                if (knownInteraction.Weight < 0.0f)
+                {
+                    // KnownInteractions.Remove(knownInteraction.Label);
+                    knownInteraction.Weight = 0f;
+
+                    /* Não é possível excluir, uma interação esquecida pode ser pré-interação de uma outra */
+                }
+            }
+        }
     }
 
     private Interaction AddOrGetInteraction(string label)
@@ -127,9 +162,9 @@ public class Memory : MonoBehaviour
 
         int sumValence = 0;
 
-        //sumValence += 0 * label.Count(x => x == '↑'); // Rotate Left
+        sumValence += -1 * label.Count(x => x == '↑'); // Rotate Left
         sumValence += -1 * label.Count(x => x == '→'); // Forward
-        //sumValence += 0 * label.Count(x => x == '↓'); // Rotate Right
+        sumValence += -1 * label.Count(x => x == '↓'); // Rotate Right
 
         sumValence += -1 * label.Count(x => x == '-'); // Unchanged
 
@@ -149,10 +184,10 @@ public class Memory : MonoBehaviour
 
         var left = GetOrAddPrimitiveInteraction("↑m--");
         var forward = GetOrAddPrimitiveInteraction("→m--");
-        var right = GetOrAddPrimitiveInteraction("↓m--");
+        //var right = GetOrAddPrimitiveInteraction("↓m--");
 
         AddOrGetAbstractExperiment(left);
         AddOrGetAbstractExperiment(forward);
-        AddOrGetAbstractExperiment(right);
+        //AddOrGetAbstractExperiment(right);
     }
 }

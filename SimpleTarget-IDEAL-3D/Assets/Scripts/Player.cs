@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float timeBetweenActions;
     [SerializeField] private float rotationSpeed;
 
+    [SerializeField] private List<char> spatialSense;
+
     private float time;
     public bool isFoodReached;
 
@@ -30,6 +32,8 @@ public class Player : MonoBehaviour
         _envInterface = GetComponent<EnvInterface>();
         time = Time.time;
         collision = false;
+
+        spatialSense = new List<char>() {'E', 'E', 'E', 'E', 'E', 'E', 'E', 'E'};
     }
 
     private void Update()
@@ -70,6 +74,75 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject != plane)
+        {
+            collision = true;
+            //return;
+        }
+
+        /*
+        var spatialSensePositions = spatialSense.Count;
+
+        foreach (var contact in other.contacts)
+        {
+            var angle = CalcAngle(contact.point); // -180 +180
+
+            if (angle >= 0 && angle <= (float) 360 / spatialSensePositions)
+            {
+                spatialSense[0] = 'b';
+            }
+            else if (angle <= 1 * (360 / (float) spatialSensePositions) &&
+                     angle <= 2 * (360 / (float) spatialSensePositions))
+            {
+                spatialSense[1] = 'b';
+            }
+            else if (angle <= 2 * (360 / (float) spatialSensePositions) &&
+                     angle <= 3 * (360 / (float) spatialSensePositions))
+            {
+                spatialSense[2] = 'b';
+            }
+            else if (angle <= 3 * (360 / (float) spatialSensePositions) &&
+                     angle <= 4 * (360 / (float) spatialSensePositions))
+            {
+                spatialSense[3] = 'b';
+            }
+            else if (angle <= 4 * (360 / (float) spatialSensePositions) &&
+                     angle <= 5 * (360 / (float) spatialSensePositions))
+            {
+                spatialSense[4] = 'b';
+            }
+            else if (angle <= 5 * (360 / (float) spatialSensePositions) &&
+                     angle <= 6 * (360 / (float) spatialSensePositions))
+            {
+                spatialSense[5] = 'b';
+            }
+            else if (angle <= 6 * (360 / (float) spatialSensePositions) &&
+                     angle <= 7 * (360 / (float) spatialSensePositions))
+            {
+                spatialSense[6] = 'b';
+            }
+            else if (angle <= 7 * (360 / (float) spatialSensePositions) &&
+                     angle <= 8 * (360 / (float) spatialSensePositions))
+            {
+                spatialSense[7] = 'b';
+            }
+        }
+        */
+    }
+
+    float CalcAngle(Vector3 other)
+    {
+        var myDir = transform.forward;
+        var otherDir = other - transform.position;
+
+        myDir.y = 0;
+        otherDir.y = 0;
+
+        return Vector3.SignedAngle(myDir, otherDir, Vector3.up);
+    }
+
     public void RotateLeft()
     {
         StartCoroutine(RotationChangeCoroutine(-1));
@@ -103,14 +176,6 @@ public class Player : MonoBehaviour
         _playerRigidbody.velocity = Vector3.zero;
         _playerObservation.UpdateObservation(true);
         _envInterface.getObservation = true;
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject != plane)
-        {
-            collision = true;
-        }
     }
 
     private void OnCollisionExit(Collision other)
