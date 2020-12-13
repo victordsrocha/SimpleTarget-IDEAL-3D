@@ -144,6 +144,7 @@ public class Observation : MonoBehaviour
     {
         string result = "";
 
+        /*
         if (player.collision && act == '→')
         {
             result += "b";
@@ -151,6 +152,14 @@ public class Observation : MonoBehaviour
         else
         {
             result += "m";
+        }
+        */
+
+        // result += player.spatialSense;
+
+        for (int i = 0; i < player.spatialSense.Count; i++)
+        {
+            result += player.spatialSense[i];
         }
 
         result += leftEye.EyeResultObservation();

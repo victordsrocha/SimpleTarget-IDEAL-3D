@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float timeBetweenActions;
     [SerializeField] private float rotationSpeed;
 
-    [SerializeField] private List<char> spatialSense;
+    public List<char> spatialSense;
 
     private float time;
     public bool isFoodReached;
@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
         time = Time.time;
         collision = false;
 
-        spatialSense = new List<char>() {'E', 'E', 'E', 'E', 'E', 'E', 'E', 'E'};
+        spatialSense = new List<char>() {'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'};
     }
 
     private void Update()
@@ -74,62 +74,80 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnCollisionExit(Collision other)
+    {
+        ResetSpatialSense();
+    }
+
+    private void OnCollisionStay(Collision other)
+    {
+        ResetSpatialSense();
+        UpdateSpatialSense(other);
+    }
+
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject != plane)
-        {
-            collision = true;
-            //return;
-        }
+        ResetSpatialSense();
+        UpdateSpatialSense(other);
+    }
 
-        /*
-        var spatialSensePositions = spatialSense.Count;
+    private void UpdateSpatialSense(Collision other)
+    {
+        var objChar = '?';
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
+            objChar = 'b';
+        }
+        else if (other.gameObject.CompareTag("Target"))
+        {
+            objChar = 't';
+        }
 
         foreach (var contact in other.contacts)
         {
             var angle = CalcAngle(contact.point); // -180 +180
 
-            if (angle >= 0 && angle <= (float) 360 / spatialSensePositions)
+            if (angle >= -180f && angle <= -135f)
             {
-                spatialSense[0] = 'b';
+                spatialSense[0] = objChar;
             }
-            else if (angle <= 1 * (360 / (float) spatialSensePositions) &&
-                     angle <= 2 * (360 / (float) spatialSensePositions))
+            else if (angle >= -135f && angle <= -90f)
             {
-                spatialSense[1] = 'b';
+                spatialSense[1] = objChar;
             }
-            else if (angle <= 2 * (360 / (float) spatialSensePositions) &&
-                     angle <= 3 * (360 / (float) spatialSensePositions))
+            else if (angle >= -90f && angle <= -45f)
             {
-                spatialSense[2] = 'b';
+                spatialSense[2] = objChar;
             }
-            else if (angle <= 3 * (360 / (float) spatialSensePositions) &&
-                     angle <= 4 * (360 / (float) spatialSensePositions))
+            else if (angle >= -45f && angle <= 0f)
             {
-                spatialSense[3] = 'b';
+                spatialSense[3] = objChar;
             }
-            else if (angle <= 4 * (360 / (float) spatialSensePositions) &&
-                     angle <= 5 * (360 / (float) spatialSensePositions))
+            else if (angle >= 0f && angle <= 45f)
             {
-                spatialSense[4] = 'b';
+                spatialSense[4] = objChar;
             }
-            else if (angle <= 5 * (360 / (float) spatialSensePositions) &&
-                     angle <= 6 * (360 / (float) spatialSensePositions))
+            else if (angle >= 45f && angle <= 90f)
             {
-                spatialSense[5] = 'b';
+                spatialSense[5] = objChar;
             }
-            else if (angle <= 6 * (360 / (float) spatialSensePositions) &&
-                     angle <= 7 * (360 / (float) spatialSensePositions))
+            else if (angle >= 90f && angle <= 135f)
             {
-                spatialSense[6] = 'b';
+                spatialSense[6] = objChar;
             }
-            else if (angle <= 7 * (360 / (float) spatialSensePositions) &&
-                     angle <= 8 * (360 / (float) spatialSensePositions))
+            else if (angle >= 135f && angle <= 180f)
             {
-                spatialSense[7] = 'b';
+                spatialSense[7] = objChar;
             }
         }
-        */
+    }
+
+    private void ResetSpatialSense()
+    {
+        for (int i = 0; i < spatialSense.Count; i++)
+        {
+            spatialSense[i] = 'e';
+        }
     }
 
     float CalcAngle(Vector3 other)
@@ -176,10 +194,5 @@ public class Player : MonoBehaviour
         _playerRigidbody.velocity = Vector3.zero;
         _playerObservation.UpdateObservation(true);
         _envInterface.getObservation = true;
-    }
-
-    private void OnCollisionExit(Collision other)
-    {
-        collision = false;
     }
 }

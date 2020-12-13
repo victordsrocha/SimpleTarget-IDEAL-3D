@@ -22,44 +22,50 @@
     <list default="true" id="f8298f22-dd27-4c17-812d-611eca018214" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleTarget-IDEAL-3D/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleTarget-IDEAL-3D/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleTarget-IDEAL-3D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleTarget-IDEAL-3D/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Obstacle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AgentAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AgentAI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Anticipation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Anticipation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Decider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Decider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Memory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Memory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Observation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Observation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/2c/2c3982158478779ec141c8a5b3978757" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/31/319339f231ccd4d3d3d05fc7b7ed5263" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/35/3576dfe35797def5ea7f8c677eeee36c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/3a/3a0778ea87633857015c1debe7aa9e91" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/3e/3ee8b5d9cf49b93c0427d5fb5ae9b44f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/50/5072a365cf03c794e666b37dc264cf87" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/58/5857b00050c2ff8b93753a4ead49edb3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/5b/5b3f7ec85acb070f3aeb5ec8f85a1cb5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/5d/5d45157d8b9884d961d8ec919318f9a9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/95/9598c2a17dd7f848ed0a11720e7e70ee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c9/c96f4bba4463dfbe4556b88a55176c52" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ce/cebf2986f1100a01108e2af81ee4eb02" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/cf/cf6224c285ca8f490548b5965236df3b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/cf/cfa55c5ac7a2d96c0aedb71dd3eb4324" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/dd/dd5d431721844aa2b5db19353157b60e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e6/e6d2d363e5e3fc813d3122a7b91dd9e3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e9/e93109819c1e4784d5d2d1159978f536" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ee/ee7b38e2addb5895c526ef616d6a9e81" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f0/f0fe508bf5b397c7e99f5ec7598c214c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/fa/fabd0b7e0c5fd3392a45ef8c127d2a57" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/fe/fe0bf929180a1f8b067cc09e33cec8ae" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/04/04da74b410503512ac2a345c17c2cc62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/0b/0bdb166742e1f5e82cffdc0ec78a5df3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/1c/1ca22af481c9554c814ce7f294b29118" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/1e/1e35bd9a3aec90b43c4c2dea2eab4336" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/1f/1f333b88f0aa6ead6f96e4bb3eed232e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/24/24ac4acc69a88ec86688422f1a6046b3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/3c/3cccced545d3e827779f2407d673834a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/4b/4bda30a7c7ec4d6bb58f211c66cd6831" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/5c/5c1871d998b0a9480fbe84675787903a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/60/60f467231c02aa273900de38b24e518a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/68/68c43d26b6496ea0cb46b1022bb6c356" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/6c/6c63d57b2cad6f8c4a9914a3dfb0d17b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/72/722588ebe023881b9481d45985cdb7be" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/7a/7a1271aec49b13de40ce23316c0a57b1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/7e/7e3dc16ad1da394bf15d313672c03541" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/99/99c4828be4a32fb357861dd98ee63139" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/9e/9ed73279e314ea8fe055fa1101a402b2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ab/ab9b167ec6ee591605a13cced519615a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ac/aca646094192f974431df0e5446c9722" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ae/aed2dfbbd35d21cf288971962552d3fc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/af/af234660634a1ec9e5fb36b9d0c83011" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c7/c741530bb22cb0f977bb17950ef49487" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c7/c77dcfda3e147f17d68dbde26193433a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c8/c88950092749a8d2c437619175de52f5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d7/d79c800c6d555078069b503e1a4233a2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d7/d7ad9ec6b9feb592103db0100e720449" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e5/e53533af8db90dc293ec1117803727d1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ea/ea83679ae4a5c93edd1d1d2c061416e5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f2/f2462aeb53661301f5d31d65f51995cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f3/f35fd4784768497a20231e8313391d6e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f7/f71cacbbfb7c68a4a821fc5c846e21d7" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/094a55-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/094a55-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/ecbcb5-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/ecbcb5-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
@@ -68,7 +74,7 @@
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe5.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe5.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe6.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe6.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe7.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe7.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,23 +85,27 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9674024A-B0E7-4D27-BBE9-EAA30DAB34D1/e8/1dd88d75/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9674024A-B0E7-4D27-BBE9-EAA30DAB34D1/4b/f6e46238/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9674024A-B0E7-4D27-BBE9-EAA30DAB34D1/c0/50495f7b/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E93AB2F8-5FF8-4881-B6AB-5BA98D373CFC/25/11425b54/NativeInputSystem.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/EnvInterface.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Observation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Target.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TargetGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Anticipation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AgentAI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Decider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Memory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Observation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Decider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Memory.cs" />
       </list>
     </option>
   </component>
@@ -137,10 +147,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="10932">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="10932" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -159,6 +169,7 @@
       <workItem from="1606920188657" duration="15669000" />
       <workItem from="1607350009697" duration="11536000" />
       <workItem from="1607369240620" duration="1321000" />
+      <workItem from="1607449990458" duration="9364000" />
     </task>
     <servers />
   </component>
@@ -187,84 +198,105 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1235" y="109" width="602" height="592" key="#xdebugger.evaluate/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606932048121" />
-    <state width="523" height="464" key="DebuggerActiveHint" timestamp="1607366317359">
+    <state width="647" height="464" key="DebuggerActiveHint" timestamp="1607459341765">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="523" height="464" key="DebuggerActiveHint/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607366317359" />
-    <state width="1877" height="252" key="GridCell.Tab.0.bottom" timestamp="1607366841560">
+    <state width="647" height="464" key="DebuggerActiveHint/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607459341765" />
+    <state width="1877" height="252" key="GridCell.Tab.0.bottom" timestamp="1607461798697">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.0.bottom/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607366841560" />
-    <state width="1877" height="252" key="GridCell.Tab.0.center" timestamp="1607366841560">
+    <state width="1877" height="252" key="GridCell.Tab.0.bottom/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607461798697" />
+    <state width="1877" height="252" key="GridCell.Tab.0.center" timestamp="1607461798697">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.0.center/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607366841560" />
-    <state width="1877" height="252" key="GridCell.Tab.0.left" timestamp="1607366841560">
+    <state width="1877" height="252" key="GridCell.Tab.0.center/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607461798697" />
+    <state width="1877" height="252" key="GridCell.Tab.0.left" timestamp="1607461798697">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.0.left/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607366841560" />
-    <state width="1877" height="252" key="GridCell.Tab.0.right" timestamp="1607366841560">
+    <state width="1877" height="252" key="GridCell.Tab.0.left/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607461798697" />
+    <state width="1877" height="252" key="GridCell.Tab.0.right" timestamp="1607461798697">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.0.right/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607366841560" />
-    <state width="1877" height="252" key="GridCell.Tab.1.bottom" timestamp="1607366841560">
+    <state width="1877" height="252" key="GridCell.Tab.0.right/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607461798697" />
+    <state width="1877" height="252" key="GridCell.Tab.1.bottom" timestamp="1607461798698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.1.bottom/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607366841560" />
-    <state width="1877" height="252" key="GridCell.Tab.1.center" timestamp="1607366841560">
+    <state width="1877" height="252" key="GridCell.Tab.1.bottom/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607461798698" />
+    <state width="1877" height="252" key="GridCell.Tab.1.center" timestamp="1607461798698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.1.center/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607366841560" />
-    <state width="1877" height="252" key="GridCell.Tab.1.left" timestamp="1607366841560">
+    <state width="1877" height="252" key="GridCell.Tab.1.center/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607461798698" />
+    <state width="1877" height="252" key="GridCell.Tab.1.left" timestamp="1607461798698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.1.left/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607366841560" />
-    <state width="1877" height="252" key="GridCell.Tab.1.right" timestamp="1607366841560">
+    <state width="1877" height="252" key="GridCell.Tab.1.left/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607461798698" />
+    <state width="1877" height="252" key="GridCell.Tab.1.right" timestamp="1607461798698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.1.right/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607366841560" />
-    <state width="1877" height="252" key="GridCell.Tab.2.bottom" timestamp="1607366841560">
+    <state width="1877" height="252" key="GridCell.Tab.1.right/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607461798698" />
+    <state width="1877" height="252" key="GridCell.Tab.2.bottom" timestamp="1607461798698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.2.bottom/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607366841560" />
-    <state width="1877" height="252" key="GridCell.Tab.2.center" timestamp="1607366841560">
+    <state width="1877" height="252" key="GridCell.Tab.2.bottom/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607461798698" />
+    <state width="1877" height="252" key="GridCell.Tab.2.center" timestamp="1607461798698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.2.center/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607366841560" />
-    <state width="1877" height="252" key="GridCell.Tab.2.left" timestamp="1607366841560">
+    <state width="1877" height="252" key="GridCell.Tab.2.center/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607461798698" />
+    <state width="1877" height="252" key="GridCell.Tab.2.left" timestamp="1607461798698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.2.left/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607366841560" />
-    <state width="1877" height="252" key="GridCell.Tab.2.right" timestamp="1607366841560">
+    <state width="1877" height="252" key="GridCell.Tab.2.left/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607461798698" />
+    <state width="1877" height="252" key="GridCell.Tab.2.right" timestamp="1607461798698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.2.right/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607366841560" />
-    <state width="1877" height="252" key="GridCell.Tab.3.bottom" timestamp="1607366841562">
+    <state width="1877" height="252" key="GridCell.Tab.2.right/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607461798698" />
+    <state width="1877" height="252" key="GridCell.Tab.3.bottom" timestamp="1607461798698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.3.bottom/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607366841562" />
-    <state width="1877" height="252" key="GridCell.Tab.3.center" timestamp="1607366841560">
+    <state width="1877" height="252" key="GridCell.Tab.3.bottom/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607461798698" />
+    <state width="1877" height="252" key="GridCell.Tab.3.center" timestamp="1607461798698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.3.center/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607366841560" />
-    <state width="1877" height="252" key="GridCell.Tab.3.left" timestamp="1607366841560">
+    <state width="1877" height="252" key="GridCell.Tab.3.center/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607461798698" />
+    <state width="1877" height="252" key="GridCell.Tab.3.left" timestamp="1607461798698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.3.left/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607366841560" />
-    <state width="1877" height="252" key="GridCell.Tab.3.right" timestamp="1607366841562">
+    <state width="1877" height="252" key="GridCell.Tab.3.left/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607461798698" />
+    <state width="1877" height="252" key="GridCell.Tab.3.right" timestamp="1607461798698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.3.right/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607366841562" />
+    <state width="1877" height="252" key="GridCell.Tab.3.right/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607461798698" />
     <state x="709" y="230" key="RollbackChangesDialog" timestamp="1607360236632">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="709" y="230" key="RollbackChangesDialog/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607360236632" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1607453496491">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="968" height="528" key="XDebugger.FullValuePopup/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1607453496491" />
     <state x="1920" y="7" width="1376" height="774" key="dock-window-1" timestamp="1606935645100">
       <screen x="1920" y="7" width="1360" height="728" />
     </state>
     <state x="1920" y="7" width="1376" height="774" key="dock-window-1/1920.7.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1606935645100" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Memory.cs</url>
+          <line>173</line>
+          <properties documentPath="C:\dev\unity\SimpleTarget-IDEAL-3D\SimpleTarget-IDEAL-3D\Assets\Scripts\Memory.cs" initialLine="172">
+            <startOffsets>
+              <option value="5773" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5790" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
         <watch expression="enactedInteraction" language="C#" />

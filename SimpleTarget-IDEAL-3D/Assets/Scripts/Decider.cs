@@ -165,6 +165,7 @@ public class Decider : MonoBehaviour
         var primitiveAnticipations = GetDefaultAnticipations();
         var randomPos = Random.Range(0, primitiveAnticipations.Count);
         return primitiveAnticipations[randomPos].Experiment;
+        //return primitiveAnticipations[0].Experiment;
     }
 
     public Experiment SelectExperiment(List<Anticipation> anticipations)

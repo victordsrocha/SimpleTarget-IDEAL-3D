@@ -62,14 +62,6 @@ public class Memory : MonoBehaviour
 
     public void DecrementAndForgetSchemas(List<Interaction> enactedInteractions)
     {
-        foreach (var enactedInteraction in enactedInteractions)
-        {
-            if (enactedInteraction != null && !enactedInteraction.is_primitive())
-            {
-                enactedInteraction.Weight += forgettingRate;
-            }
-        }
-
         foreach (var knownInteraction in KnownInteractions.Values)
         {
             if (!knownInteraction.is_primitive())
@@ -78,12 +70,19 @@ public class Memory : MonoBehaviour
                 {
                     // estou dividindo pela valencia como uma forma provisoria de garantir que 
                     // memorias muito boas ou muito ruins sejam mais dificilemtne esquecidas
-                    knownInteraction.Weight -= forgettingRate / Mathf.Abs(knownInteraction.valence);
+                    if (knownInteraction.valence > 1 || knownInteraction.valence < -1)
+                    {
+                        knownInteraction.Weight -= forgettingRate / Mathf.Abs(knownInteraction.valence);
+                    }
+                    else
+                    {
+                        knownInteraction.Weight -= forgettingRate;
+                    }
                 }
 
 
                 // When a schema reaches a weight of 0 it is deleted from memory
-                if (knownInteraction.Weight < 0.0f)
+                if (knownInteraction.Weight < 0.01f)
                 {
                     // KnownInteractions.Remove(knownInteraction.Label);
                     knownInteraction.Weight = 0f;
@@ -162,13 +161,23 @@ public class Memory : MonoBehaviour
 
         int sumValence = 0;
 
-        sumValence += -1 * label.Count(x => x == '↑'); // Rotate Left
-        sumValence += -1 * label.Count(x => x == '→'); // Forward
-        sumValence += -1 * label.Count(x => x == '↓'); // Rotate Right
+        //sumValence += -0 * label.Count(x => x == '↑'); // Rotate Left
+        //sumValence += -0 * label.Count(x => x == '→'); // Forward
+        //sumValence += -0 * label.Count(x => x == '↓'); // Rotate Right
 
-        sumValence += -1 * label.Count(x => x == '-'); // Unchanged
+        //sumValence += -0 * label.Count(x => x == '-'); // Unchanged
 
-        sumValence += -8 * label.Count(x => x == 'b'); // Bump
+        // Bump
+        if ((label.Count(x => x == 'b') > 0 && label[0] == '→') ||
+            label[4] == 'b' || label[5] == 'b')
+        {
+            sumValence += -8;
+        }
+        else
+        {
+            sumValence += 0;
+        }
+
         sumValence += 15 * label.Count(x => x == '*'); // Appear
         sumValence += 10 * label.Count(x => x == '+'); // Closer
         sumValence += 10 * label.Count(x => x == 'x'); // Reached
@@ -182,12 +191,12 @@ public class Memory : MonoBehaviour
     {
         // ▶ ▷ △ ▲ ▼ ▽ ◀ ◁ ◇ ◈ ◆ ↑ ↓
 
-        var left = GetOrAddPrimitiveInteraction("↑m--");
-        var forward = GetOrAddPrimitiveInteraction("→m--");
-        //var right = GetOrAddPrimitiveInteraction("↓m--");
+        var left = GetOrAddPrimitiveInteraction("↑eeeeeeee--");
+        var forward = GetOrAddPrimitiveInteraction("→eeeeeeee--");
+        var right = GetOrAddPrimitiveInteraction("↓eeeeeeee--");
 
         AddOrGetAbstractExperiment(left);
         AddOrGetAbstractExperiment(forward);
-        //AddOrGetAbstractExperiment(right);
+        AddOrGetAbstractExperiment(right);
     }
 }
