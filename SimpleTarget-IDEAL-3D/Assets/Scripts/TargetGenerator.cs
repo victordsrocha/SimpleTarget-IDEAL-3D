@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -38,8 +39,8 @@ public class TargetGenerator : MonoBehaviour
     {
         Target newTarget = null;
 
-        float x = Random.Range(-18f, 18f);
-        float z = Random.Range(-8f, 8f);
+        float x = Random.Range(-17f, 17f);
+        float z = Random.Range(-7f, 7f);
         Vector3 birthSpot = new Vector3(x, 0.6f, z);
 
         Collider[] overlapSphere = Physics.OverlapSphere(birthSpot, 2f, obstacleMask);
@@ -47,8 +48,27 @@ public class TargetGenerator : MonoBehaviour
         {
             newTarget = Instantiate(targetPrefab, birthSpot, Quaternion.identity);
             newTarget.birthTime = Time.time;
+            
+            int time = (int)Time.time;
+            AddRecordTarget(time.ToString(), "targetRecord.csv");
         }
 
         return newTarget;
+    }
+    
+    public static void AddRecordTarget(string time, string filepath)
+    {
+        try
+        {
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@filepath, true))
+            {
+                file.WriteLine(time);
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 }

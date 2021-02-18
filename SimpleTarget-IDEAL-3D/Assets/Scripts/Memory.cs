@@ -10,7 +10,7 @@ public class Memory : MonoBehaviour
     public Dictionary<string, Interaction> KnownInteractions;
     public Dictionary<string, Experiment> KnownExperiments;
     private int interactionLabelSize;
-    [SerializeField] private float forgettingRate = 0.2f;
+    [SerializeField] private float forgettingRate = 0.05f;
 
     private void Start()
     {
@@ -139,7 +139,7 @@ public class Memory : MonoBehaviour
         return KnownInteractions[label];
     }
 
-    private int CalcValence(string label)
+    public int CalcValence(string label)
     {
         /*sum_valence = 0
         sum_valence += label.count('^') * (-5)
@@ -161,27 +161,28 @@ public class Memory : MonoBehaviour
 
         int sumValence = 0;
 
-        //sumValence += -0 * label.Count(x => x == '↑'); // Rotate Left
-        //sumValence += -0 * label.Count(x => x == '→'); // Forward
-        //sumValence += -0 * label.Count(x => x == '↓'); // Rotate Right
+        sumValence += -1 * label.Count(x => x == '↑'); // Rotate Left
+        sumValence += -3 * label.Count(x => x == '→'); // Forward
+        sumValence += -1 * label.Count(x => x == '↓'); // Rotate Right
 
         //sumValence += -0 * label.Count(x => x == '-'); // Unchanged
 
         // Bump
-        if ((label.Count(x => x == 'b') > 0 && label[0] == '→') ||
-            label[4] == 'b' || label[5] == 'b')
+        //if ((label.Count(x => x == 'b') > 0 && label[0] == '→') ||
+        //    label[4] == 'b' || label[5] == 'b')
+        if (label[4] == 'b' || label[5] == 'b')
         {
-            sumValence += -8;
+            sumValence += -10;
         }
-        else
+        else if(label[3] == 'b' || label[6] == 'b')
         {
-            sumValence += 0;
+            sumValence += -5;
         }
 
-        sumValence += 15 * label.Count(x => x == '*'); // Appear
+        sumValence += 5 * label.Count(x => x == '*'); // Appear
         sumValence += 10 * label.Count(x => x == '+'); // Closer
-        sumValence += 10 * label.Count(x => x == 'x'); // Reached
-        sumValence += -15 * label.Count(x => x == 'o'); // Disappear
+        sumValence += 15 * label.Count(x => x == 'x'); // Reached
+        sumValence += -10 * label.Count(x => x == 'o'); // Disappear
 
 
         return sumValence;
@@ -191,12 +192,14 @@ public class Memory : MonoBehaviour
     {
         // ▶ ▷ △ ▲ ▼ ▽ ◀ ◁ ◇ ◈ ◆ ↑ ↓
 
-        var left = GetOrAddPrimitiveInteraction("↑eeeeeeee--");
         var forward = GetOrAddPrimitiveInteraction("→eeeeeeee--");
+        var left = GetOrAddPrimitiveInteraction("↑eeeeeeee--");
+        
         var right = GetOrAddPrimitiveInteraction("↓eeeeeeee--");
 
-        AddOrGetAbstractExperiment(left);
         AddOrGetAbstractExperiment(forward);
+        AddOrGetAbstractExperiment(left);
+        
         AddOrGetAbstractExperiment(right);
     }
 }

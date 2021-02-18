@@ -11,11 +11,14 @@ public class Decider : MonoBehaviour
     public Interaction enactedInteraction;
     private Interaction superInteraction;
 
+    private int count;
+
     private void Start()
     {
         memory = GetComponent<Memory>();
         enactedInteraction = null;
         superInteraction = null;
+        count = 0;
     }
 
     List<Interaction> GetActivatedInteractions()
@@ -205,6 +208,12 @@ public class Decider : MonoBehaviour
 
 
             var selectedAnticipation = anticipations[0];
+
+            if (0.9>Random.Range(0,1))
+            {
+                return selectedAnticipation.Experiment;
+            }
+
             if (selectedAnticipation.Proclivity > 0f)
             {
                 selectedExperiment = selectedAnticipation.Experiment;
@@ -225,12 +234,14 @@ public class Decider : MonoBehaviour
                 selectedExperiment = GetOtherExperimentPrimitive();
             }
         }
+        
         else
         {
             selectedExperiment = GetOtherExperimentPrimitive();
         }
 
         return selectedExperiment;
+        
     }
 
     // essa função não deveria estar em memory?

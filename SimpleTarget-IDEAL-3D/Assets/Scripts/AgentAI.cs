@@ -14,6 +14,7 @@ public class AgentAI : MonoBehaviour
     public bool nextStep;
     public static bool tryEnactComplete;
     public static Interaction EnactedInteractionGlobal;
+    public int step;
 
     private StepManager stepManager;
 
@@ -24,6 +25,7 @@ public class AgentAI : MonoBehaviour
         enacter = GetComponent<Enacter>();
         mood = null;
         nextStep = true;
+        step = 1;
 
         stepManager = FindObjectOfType<StepManager>();
 
@@ -77,6 +79,10 @@ public class AgentAI : MonoBehaviour
 
     void Learn(Interaction intendedInteraction, Interaction enactedInteraction)
     {
+        AddRecord(step.ToString(), memory.CalcValence(enactedInteraction.Label).ToString(),enactedInteraction.Label,"recordFile.csv");
+        step++;
+        
+        
         if (enactedInteraction != intendedInteraction)
         {
             // logica -> nao lembro se intendedInteraction.experiment é sempre igual ao experiment.intendedInteraction
@@ -128,5 +134,21 @@ public class AgentAI : MonoBehaviour
         size += 1 * label.Count(x => x == '↓');
 
         return size;
+    }
+
+    public static void AddRecord(string decisionStep, string valence, string scheme, string filepath)
+    {
+        try
+        {
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@filepath, true))
+            {
+                file.WriteLine(decisionStep + "," + valence + "," + scheme);
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 }
